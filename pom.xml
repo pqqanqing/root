@@ -116,6 +116,7 @@
         <version.quartz>2.2.2</version.quartz>
         <version.jstl>1.2</version.jstl>
         <version.servlet-api>2.5</version.servlet-api>
+        <version.javax.servlet-api>3.1.0</version.javax.servlet-api>
         <version.jsp-api>2.0</version.jsp-api>
         <version.commons-lang3>3.3.2</version.commons-lang3>
         <version.commons-collections>3.2</version.commons-collections>
@@ -328,11 +329,20 @@
                 <version>${version.commons-io}</version>
             </dependency>
 
-            <!-- servlet configuration -->
+            <!-- servlet configuration 3.0之前版本 -->
             <dependency>
                 <groupId>javax.servlet</groupId>
                 <artifactId>servlet-api</artifactId>
                 <version>${version.servlet-api}</version>
+                <type>jar</type>
+                <scope>provided</scope>
+            </dependency>
+
+            <!-- servlet configuration 3.0之后版本 -->
+            <dependency>
+                <groupId>javax.servlet</groupId>
+                <artifactId>javax.servlet-api</artifactId>
+                <version>${version.javax.servlet-api}</version>
                 <type>jar</type>
                 <scope>provided</scope>
             </dependency>
